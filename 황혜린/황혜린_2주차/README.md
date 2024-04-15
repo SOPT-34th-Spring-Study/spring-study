@@ -19,7 +19,7 @@
 
 - 회원 도메인 협력 관계
     
-    ![1.png](%E1%84%89%E1%85%B3%E1%84%91%E1%85%B3%E1%84%85%E1%85%B5%E1%86%BC%202%E1%84%8C%E1%85%AE%E1%84%8E%E1%85%A1%20263b043c5e0340cb9fb1473acd10bb04/1.png)
+![1](https://github.com/SOPT-34th-Spring-Study/spring-study/assets/144998449/1a5ebf95-b0ac-40f3-b457-afe0ba7428dc)
     
     - 회원 저장소가 미정이므로 인터페이스를 만든 후 구현.
     - 저장소 확정 전에 개발 용으로 `메모리 회원 저장소`를 만듦. 간단히 회원 객체 넣었다 뺄 수 있고, 서버 재부팅 시 저장된 데이터 없어짐.
@@ -27,13 +27,14 @@
     - 기획자도 이해 가능.
 - 회원 클래스 다이어그램
     
-    ![2.png](%E1%84%89%E1%85%B3%E1%84%91%E1%85%B3%E1%84%85%E1%85%B5%E1%86%BC%202%E1%84%8C%E1%85%AE%E1%84%8E%E1%85%A1%20263b043c5e0340cb9fb1473acd10bb04/2.png)
+![2](https://github.com/SOPT-34th-Spring-Study/spring-study/assets/144998449/92c9deb2-b716-4b4d-955a-de218446e222)
     
     - 도메인 협력 관계 바탕으로 개발자가  구체화.
     - 정적. 서버 실행 없이 클래스들만 분석 가능.  어떤 구현체를 넣을지는 서버 실행했을 때 동적으로 결정되므로 객체 다이어그램이 필요.
 - 회원 객체 다이어그램
     
-    ![3.png](%E1%84%89%E1%85%B3%E1%84%91%E1%85%B3%E1%84%85%E1%85%B5%E1%86%BC%202%E1%84%8C%E1%85%AE%E1%84%8E%E1%85%A1%20263b043c5e0340cb9fb1473acd10bb04/3.png)
+![3](https://github.com/SOPT-34th-Spring-Study/spring-study/assets/144998449/8df9b9df-3240-4edb-ba52-9922c76a5e42)
+
     
     - 객체 간의 참조 관계 표현.
     - 회원 서비스 : MemberServiceImpl
@@ -60,7 +61,8 @@
 
 - 주문 도메인 협력, 역할 , 책임
     
-    ![Untitled](%E1%84%89%E1%85%B3%E1%84%91%E1%85%B3%E1%84%85%E1%85%B5%E1%86%BC%202%E1%84%8C%E1%85%AE%E1%84%8E%E1%85%A1%20263b043c5e0340cb9fb1473acd10bb04/Untitled.png)
+![Untitled](https://github.com/SOPT-34th-Spring-Study/spring-study/assets/144998449/d039bd9c-3e34-4e09-b84b-9e066b181da1)
+
     
     1. 주문 생성: 클라이언트가 주문 서비스에 주문 생성 요청.
     2. 회원 조회: 주문서비스가 회원 저장소에서 회원 조회.
@@ -69,22 +71,23 @@
     - 실제로는 주문 데이터를 DB에 저장하지만 예지 특성상 주문 결과 반환까지만 구현
 - 주문 도메인 전체
     
-    ![Untitled](%E1%84%89%E1%85%B3%E1%84%91%E1%85%B3%E1%84%85%E1%85%B5%E1%86%BC%202%E1%84%8C%E1%85%AE%E1%84%8E%E1%85%A1%20263b043c5e0340cb9fb1473acd10bb04/Untitled%201.png)
+![Untitled (1)](https://github.com/SOPT-34th-Spring-Study/spring-study/assets/144998449/955377a0-269e-47ca-8521-c2ae59b348f2)
     
     - 역할 먼저 만든 후 구현. 즉 역할과 구현을 분리함. 이를 통해 자유롭게 구현 객체 조립 가능. 회원 저장소, 할인 정책 모두 유연하게 변경 가능.
 - 주문 도메인 클래스 다이어그램
     
-    ![Untitled](%E1%84%89%E1%85%B3%E1%84%91%E1%85%B3%E1%84%85%E1%85%B5%E1%86%BC%202%E1%84%8C%E1%85%AE%E1%84%8E%E1%85%A1%20263b043c5e0340cb9fb1473acd10bb04/Untitled%202.png)
+![Untitled (2)](https://github.com/SOPT-34th-Spring-Study/spring-study/assets/144998449/740915c2-baa6-492b-b731-ffcb2721d8b2)
+
     
 - 주문 도메인 객체 다이어그램1
     
-    ![Untitled](%E1%84%89%E1%85%B3%E1%84%91%E1%85%B3%E1%84%85%E1%85%B5%E1%86%BC%202%E1%84%8C%E1%85%AE%E1%84%8E%E1%85%A1%20263b043c5e0340cb9fb1473acd10bb04/Untitled%203.png)
+![Untitled (3)](https://github.com/SOPT-34th-Spring-Study/spring-study/assets/144998449/5324a669-7b96-4e1c-9a25-a2ad7e6a9f55)
     
     - 회원을 메모리에서 조회하고, 정액 할인 정책(고정 금액)을 지원해도 주문 서비스 변경 안해도 됨. 역할들의 협력 관계 그대로 재사용 가능.
     - DbMemberRepository가 메모리에서 db로 바뀌고 DiscountPolicy가 정액 할인에서 정률 할인 정책으로 바뀌어도 주문 서비스 구현체를 변경 안해도 된다는 뜻.
 - 주문 도메인 객체 다이어그램2
     
-    ![Untitled](%E1%84%89%E1%85%B3%E1%84%91%E1%85%B3%E1%84%85%E1%85%B5%E1%86%BC%202%E1%84%8C%E1%85%AE%E1%84%8E%E1%85%A1%20263b043c5e0340cb9fb1473acd10bb04/Untitled%204.png)
+![Untitled (4)](https://github.com/SOPT-34th-Spring-Study/spring-study/assets/144998449/142b31d1-44f8-484f-a70a-54f3a6acbecd)
     
     - 회원을 메모리가 아닌 실제 db에서 조회하고,  정률 할인 정책(주문 금액 따라 % 할인)을 지원하는 케이스.
     - 주문 서비스 바꾸지 않고 협력 관계 그대로 재사용 가능.
@@ -94,7 +97,8 @@
 - 스프링 같은 컨테이너의 도움 없이 순수하게 자바 코드만 테스트. JUnit.
 - 실제 프로그램 전체 테스트에 수천 개의 단위 테스트가 실행되므로 단위 테스트 잘 만드는 게 중요
     
-    ![Untitled](%E1%84%89%E1%85%B3%E1%84%91%E1%85%B3%E1%84%85%E1%85%B5%E1%86%BC%202%E1%84%8C%E1%85%AE%E1%84%8E%E1%85%A1%20263b043c5e0340cb9fb1473acd10bb04/Untitled%205.png)
+![Untitled (5)](https://github.com/SOPT-34th-Spring-Study/spring-study/assets/144998449/f27eaacd-6331-4c52-9288-5410a56db984)
+
     
 - 예시 코드처럼 자동 생성된 test 폴더 안에 작성. `Assertions.assertThat().isEqaulTo()`로 테스트하고, Assertions는 `org.assertj.core.api` 로 선택.
 - 기능 별로 테스트.
