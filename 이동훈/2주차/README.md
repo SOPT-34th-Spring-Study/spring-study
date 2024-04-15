@@ -28,6 +28,7 @@
 <img width="751" alt="01" src="https://github.com/SOPT-34th-Spring-Study/spring-study/assets/125895298/dc4ddd77-6c0c-42a5-b5af-bc9cdc5a58b6">
 <img width="765" alt="02" src="https://github.com/SOPT-34th-Spring-Study/spring-study/assets/125895298/b6b3a9c1-22d5-4da3-9c86-1af6ebddae13">
 <img width="751" alt="03" src="https://github.com/SOPT-34th-Spring-Study/spring-study/assets/125895298/11a8fad7-0603-40de-a5fc-0dc184d58fd2">
+
 ## 회원 도메인 개발 및 실행과 테스트
 
 https://github.com/SOPT-34th-Spring-Study/spring-study-code
