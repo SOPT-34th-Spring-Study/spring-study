@@ -26,7 +26,7 @@ ApplicationContext applicationContext = new AnnotationConfigApplicationContext(A
 
 ### 1. 스프링 컨테이너 생성
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/81d7463e-3227-4890-a4ef-2035ef011169/1fe1bc8c-9003-4ca4-a7ce-54a752a9b327/Untitled.png)
+<img width="767" alt="a1" src="https://github.com/SOPT-34th-Spring-Study/spring-study/assets/125895298/8e060ec7-9ca4-4a37-b123-28e5f39a9f1f">
 
 - new AnnotationConfigApplicationContext(AppConfig.class)로 스프링 컨테이너를 만듬
 - **스프링 컨테이너 안에 스프링 빈 저장소가 있음. Bean 이름은 key, Bean 객체는 value**
@@ -34,7 +34,7 @@ ApplicationContext applicationContext = new AnnotationConfigApplicationContext(A
 
 ### 2. 스프링 빈 등록
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/81d7463e-3227-4890-a4ef-2035ef011169/0a663945-17bd-42b2-9677-274e4753d6a2/Untitled.png)
+<img width="771" alt="a2" src="https://github.com/SOPT-34th-Spring-Study/spring-study/assets/125895298/06a2dff5-9cfe-4ab4-ba81-9e62dc5abe97">
 
 - **@Bean이 붙은 거를 모두 호출**
 - 빈 이름은 보통 메서드 이름을 쓰는데, `@Bean(name="memberService2")` 와 같이 직접 이름을 부여할 수도 있다.
@@ -46,7 +46,7 @@ ApplicationContext applicationContext = new AnnotationConfigApplicationContext(A
 
 ### 3. 스프링 빈 의존관계 설정 - 준비 및 완료
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/81d7463e-3227-4890-a4ef-2035ef011169/c09a6039-4fc5-46d5-b849-606deb25216c/Untitled.png)
+<img width="813" alt="a3" src="https://github.com/SOPT-34th-Spring-Study/spring-study/assets/125895298/467e2210-55fc-4a5b-b7e8-6232c39e8b5b">
 
 - **스프링 컨테이너는 설정 정보를 참고해 의존관계 주입(DI)**
 - 이거에 대한 자세한 부분은 싱글톤 컨테이너에서 설명
@@ -292,15 +292,14 @@ class ApplicationContextExtendsFindTest {
 }
 ```
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/81d7463e-3227-4890-a4ef-2035ef011169/395bbb18-6a98-4384-8e33-e03b47badc0a/Untitled.png)
-
+<img width="781" alt="b" src="https://github.com/SOPT-34th-Spring-Study/spring-study/assets/125895298/cf18ede9-f42a-4b4f-9481-355214a3db23">
 - **자식타입은 다 끌려나온다 - 대원칙!**
 - 부모 타입으로 조회하면, 자식 타입도 함께 조회한다.
 - 따라서, Object 타입으로 조회하면, 모든 스프링 빈을 조회한다.
 
 ## BeanFactory와 ApplicationContext
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/81d7463e-3227-4890-a4ef-2035ef011169/9a97cfa4-917a-437c-966b-3c3d45446712/Untitled.png)
+<img width="399" alt="a4" src="https://github.com/SOPT-34th-Spring-Study/spring-study/assets/125895298/c16d3ba4-4681-4182-bc89-46223a1fb3dd">
 
 - **BeanFactory**
     - 스프링 컨테이너의 최상위 인터페이스
@@ -316,7 +315,7 @@ class ApplicationContextExtendsFindTest {
 
 ### ApplicationContext가 제공하는 부가기능
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/81d7463e-3227-4890-a4ef-2035ef011169/414caf24-5582-4a9a-9b3d-8379d66c8229/Untitled.png)
+<img width="781" alt="a5" src="https://github.com/SOPT-34th-Spring-Study/spring-study/assets/125895298/0b4691d9-3fd8-47ba-b476-a0b62bbc118d">
 
 - **메시지소스를 활용한 국제화 기능**
     - 예를 들어서 한국에서 들어오면 한국어로, 영어권에서 들어오면 영어로 출력
@@ -337,7 +336,7 @@ class ApplicationContextExtendsFindTest {
 
 ## 다양한 설정 형식 지원 - 자바 코드, XML
 
-```java
+```
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -377,7 +376,7 @@ public class XmlAppContext {
 
 ```
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/81d7463e-3227-4890-a4ef-2035ef011169/d38bef44-ebfc-4b68-8480-22a593943d6c/Untitled.png)
+<img width="805" alt="a7" src="https://github.com/SOPT-34th-Spring-Study/spring-study/assets/125895298/9a66398f-b67a-4457-b1de-0b879780d973">
 
 ### **애노테이션 기반 자바 코드 설정 사용**
 
@@ -416,14 +415,13 @@ public class BeanDefinitionTest {
 }
 ```
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/81d7463e-3227-4890-a4ef-2035ef011169/732705c4-d17a-4cd2-b368-1af46df721d8/Untitled.png)
-
+<img width="805" alt="a7" src="https://github.com/SOPT-34th-Spring-Study/spring-study/assets/125895298/9a66398f-b67a-4457-b1de-0b879780d973">
 - **스프링 컨테이너는 메타정보를 기반으로 스프링 빈을 생성한다.**
 - BeanDefinition을 빈 설정 메타정보라 한다.
     - @Bean , <bean> 당 각각 하나씩 메타 정보가 생성된다.
 - **역할과 구현을 개념적으로 나눈 것으로, 다 몰라도 오직 BeanDefinition만 알면 된다.**
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/81d7463e-3227-4890-a4ef-2035ef011169/7dd77e4d-aba4-4334-a8d4-820d41dd278d/Untitled.png)
+<img width="807" alt="a8" src="https://github.com/SOPT-34th-Spring-Study/spring-study/assets/125895298/035c1c8d-9aab-4ef8-916e-dd0b06e05080">
 
 - AnnotationConfigApplicationContext 는 AnnotatedBeanDefinitionReader를 사용해서
   AppConfig.class를 읽고 BeanDefinition을 생성한다.
