@@ -90,8 +90,8 @@ public class OrderServiceImpl implements OrderService {
      
      public OrderService orderService() {
          return new OrderServiceImpl(
-							new MemoryMemberRepository(),
-							new FixDiscountPolicy());
+             new MemoryMemberRepository(),
+             new FixDiscountPolicy());
       }
 }
 ```
@@ -121,8 +121,8 @@ public class MemberServiceImpl implements MemberService {
  
 	private final MemberRepository memberRepository;
 	
-	 public MemberServiceImpl(MemberRepository memberRepository) {
-       this.memberRepository = memberRepository;
+	public MemberServiceImpl(MemberRepository memberRepository) {
+         	this.memberRepository = memberRepository;
 	}
 }
 ```
@@ -148,8 +148,8 @@ public class MemberServiceImpl implements MemberService {
 ```java
 public class AppConfig {
 	public MemberService memberService() {
-      return new MemberServiceImpl(new MemoryMemerRepository());    
-  }
+            return new MemberServiceImpl(new MemoryMemerRepository());    
+        }
 }
 ```
 
@@ -181,14 +181,14 @@ memberServiceImpl 입장에서는 의존관계를 외부에서 주입해주는 �
  
      public MemberService memberService() {
          return new MemberServiceImpl(new MemoryMemberRepository());
-		 }
+     }
 		 
      public OrderService orderService() {
          return new OrderServiceImpl(
                  new MemoryMemberRepository(),
-                 new FixDiscountPolicy());}
+                 new FixDiscountPolicy());
      }    
-  }
+}
 ```
 
 보면 new MemoryMemberRepository() 부분이 중복이 되었고, 역할과 구현이 한눈에 안들어온다. 역할과 구현이 한눈에 드러나게 리팩토링 해보자.
@@ -200,21 +200,21 @@ public class AppConfig {
 
      public MemberService memberService() {
          return new MemberServiceImpl(memberRepository());
-		 }
-		 
+     }
+
      public OrderService orderService() {
          return new OrderServiceImpl(
                  memberRepository(),
                  discountPolicy());
-		 }
+     }
 		 
      public MemberRepository memberRepository() {
          return new MemoryMemberRepository(); // 이 부분만 변경하면 됨
-		 }
+     }
 		 
      public DiscountPolicy discountPolicy() {
          return new FixDiscountPolicy(); // 이 부분만 변경하면 됨.
-		 }
+     }
 }
 ```
 
