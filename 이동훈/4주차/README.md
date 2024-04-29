@@ -293,6 +293,7 @@ class ApplicationContextExtendsFindTest {
 ```
 
 <img width="781" alt="b" src="https://github.com/SOPT-34th-Spring-Study/spring-study/assets/125895298/cf18ede9-f42a-4b4f-9481-355214a3db23">
+
 - **자식타입은 다 끌려나온다 - 대원칙!**
 - 부모 타입으로 조회하면, 자식 타입도 함께 조회한다.
 - 따라서, Object 타입으로 조회하면, 모든 스프링 빈을 조회한다.
@@ -416,9 +417,10 @@ public class BeanDefinitionTest {
 ```
 
 <img width="805" alt="a7" src="https://github.com/SOPT-34th-Spring-Study/spring-study/assets/125895298/9a66398f-b67a-4457-b1de-0b879780d973">
+
 - **스프링 컨테이너는 메타정보를 기반으로 스프링 빈을 생성한다.**
 - BeanDefinition을 빈 설정 메타정보라 한다.
-    - @Bean , <bean> 당 각각 하나씩 메타 정보가 생성된다.
+    - `@Bean , <bean>` 당 각각 하나씩 메타 정보가 생성된다.
 - **역할과 구현을 개념적으로 나눈 것으로, 다 몰라도 오직 BeanDefinition만 알면 된다.**
 
 <img width="807" alt="a8" src="https://github.com/SOPT-34th-Spring-Study/spring-study/assets/125895298/035c1c8d-9aab-4ef8-916e-dd0b06e05080">
