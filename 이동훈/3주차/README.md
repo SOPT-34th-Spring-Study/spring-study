@@ -7,10 +7,10 @@
 3. 테스트까지 완료(성공)
 
 ```java
-   public class OrderServiceImpl implements OrderService {
+public class OrderServiceImpl implements OrderService {
  //    private final DiscountPolicy discountPolicy = new FixDiscountPolicy();
        private final DiscountPolicy discountPolicy = new RateDiscountPolicy();
- }
+}
 ```
 
 클라이언트의 코드의 구현 클래스를 RateDiscountPolicy로 변경했지만 문제점 발생!
