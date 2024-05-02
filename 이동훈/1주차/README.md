@@ -126,7 +126,9 @@
 
 <img width="601" alt="Untitled 2" src="https://github.com/SOPT-34th-Spring-Study/spring-study/assets/125895298/85d89427-3eab-4d87-a060-8d2ecd1cad8d">
 
+
 <aside>
+    
 💡 클라이언트(MemberService)는 MemberRepository에 의존(알고있다) 즉, 클라이언트는 역할(MemberRepository)을 알고있으므로 구현체가 MemoryMemberRepository → JdbcMemberRepository로 바뀌어도 클라이언트에 영향을 주지 않는다!
 
 </aside>
